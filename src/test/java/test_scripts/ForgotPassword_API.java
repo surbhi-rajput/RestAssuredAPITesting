@@ -12,7 +12,7 @@ public class ForgotPassword_API {
 
 	@SuppressWarnings("unchecked")
 	@Test
-	public void SignIn() {
+	public void ForgotPassword() {
 
 		//Specify base URI
 		RestAssured.baseURI = "http://stlukesuat.azurewebsites.net";

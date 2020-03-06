@@ -11,11 +11,12 @@ import org.testng.Reporter;
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.reporter.ExtentAventReporter;
+import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
+import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class Listener implements ITestListener {
 
-	public ExtentAventReporter extentAventReporter;
+	public ExtentHtmlReporter extentHtmlReporter;
 	public ExtentReports extentReports;
 	public ExtentTest extentTest;
 
@@ -40,11 +41,10 @@ public class Listener implements ITestListener {
 	public void onStart(ITestContext arg0) {
 
 		Reporter.log("About to begin executing Test " + arg0.getName(), true);
-		extentAventReporter=new ExtentAventReporter(System.getProperty("user.dir")+"\\test-output\\extent_report.html");
-		//extentAventReporter.loadXMLConfig("avent-config.xml");
-
+		extentHtmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+"\\test-output\\extent_report.html");
+extentHtmlReporter.config().setTheme(Theme.DARK);
 		extentReports=new ExtentReports();
-		extentReports.attachReporter(extentAventReporter);
+		extentReports.attachReporter(extentHtmlReporter);
 
 	}
 
@@ -62,6 +62,7 @@ public class Listener implements ITestListener {
 
 	public void onTestSuccess(ITestResult arg0) {
 
+		System.out.println("==in test=========");
 		// This is calling the printTestResults method
 		extentTest=extentReports.createTest(arg0.getName());
 		extentTest.log(Status.PASS, "Test Case PASSED is "+arg0.getName());//to add name in extent report
