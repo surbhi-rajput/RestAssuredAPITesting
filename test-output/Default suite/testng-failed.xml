@@ -3,11 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="test_scripts.ForgotPassword_API">
+      <class name="test_scripts.SignIn_API">
         <methods>
           <include name="SignIn"/>
         </methods>
-      </class> <!-- test_scripts.ForgotPassword_API -->
+      </class> <!-- test_scripts.SignIn_API -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

@@ -162,6 +162,9 @@
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;https://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;Suite&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
+  &lt;listeners&gt;
+    &lt;listener class-name=&quot;utils.Listener&quot;/&gt;
+  &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Test&quot;&gt;
     &lt;classes&gt;
       &lt;class name=&quot;test_scripts.ForgotPassword_API&quot;/&gt;
@@ -209,16 +212,16 @@ data.addRows(2);
 data.setCell(0, 0, 0)
 data.setCell(0, 1, 'SignIn')
 data.setCell(0, 2, 'test_scripts.ForgotPassword_API')
-data.setCell(0, 3, 3503);
+data.setCell(0, 3, 3756);
 data.setCell(1, 0, 1)
 data.setCell(1, 1, 'SignIn')
 data.setCell(1, 2, 'test_scripts.SignIn_API')
-data.setCell(1, 3, 2367);
+data.setCell(1, 3, 872);
 window.suiteTableData['Suite']= { tableData: data, tableDiv: 'times-div-Suite'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 seconds</span>
+              <span class="suite-total-time">Total running time: 4 seconds</span>
               <div id="times-div-Suite">
               </div> <!-- times-div-Suite -->
             </div> <!-- times-div -->
@@ -229,6 +232,20 @@ return data;
             <span class="header-content">Reporter output for Suite</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">SignIn</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test Method resides in test_scripts.ForgotPassword_API</span>
+                <span class="reporter-method-output">Test Status: Pass</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
+            <div class="reporter-method-div">
+              <span class="reporter-method-name">SignIn</span>
+              <div class="reporter-method-output-div">
+                <span class="reporter-method-output">Test Method resides in test_scripts.SignIn_API</span>
+                <span class="reporter-method-output">Test Status: Pass</span>
+              </div> <!-- reporter-method-output-div -->
+            </div> <!-- reporter-method-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
         <div panel-name="ignored-methods-Suite" class="panel">
@@ -254,7 +271,7 @@ return data;
               <div class="chronological-class-name">test_scripts.SignIn_API</div> <!-- chronological-class-name -->
               <div class="test-method">
                 <span class="method-name">SignIn</span>
-                <span class="method-start">3513 ms</span>
+                <span class="method-start">3785 ms</span>
               </div> <!-- test-method -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
